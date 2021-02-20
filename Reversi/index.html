@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test Reversi Grille</title>
+	</head>
+
+	<body>
+	<header id="avantDebut" class="le_div_visible">
+		<div>
+			Choisir le niveau de l'IA :<br>
+			<button onclick="donnerNiveauIA(1)">Niveau 1</button>
+			<button onclick="donnerNiveauIA(2)">Niveau 2</button>
+			<button onclick="donnerNiveauIA(3)">Niveau 3</button>
+			<button onclick="donnerNiveauIA(4)">Niveau 4</button>
+			<button onclick="donnerNiveauIA(5)">Niveau 5</button>
+		</div>
+		<div>
+			------------------------------------------------------------------<br>
+			<button style="margin-left: 11.5%" onclick="jouer(); masquerDiv()">Start</button>
+		</div>
+	</header>
+	<main id="apresDebut" class="le_div_masque">
+		<div>
+			<button onclick="afficherRegle()">Regles</button>
+			<button style="margin-left: 22.25%" onclick="tourOrdi2(1)">Passer</button>
+		</div>
+		<div style="height: 30%">
+			<div id="field">
+				<canvas id="canvas" width="400" height="400"></canvas>
+			</div>
+			<button style="margin-left: 27.5%" onclick='window.location.reload(false)' value="Rafraichir">restart</button>
+		</div>
+	</main>
+	</body>
+	<script type="text/javascript" src="./jquery.js"> </script>
+	<script type="text/javascript" src="./grille.js"> </script>
+	<style type="text/css">
+		.le_div_masque{
+			display: none;
+		}
+		.le_div_visible{
+			display: block;
+		}
+	</style>
+</html>
